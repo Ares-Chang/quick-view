@@ -48,6 +48,7 @@
     "cross-env": "^7.0.3",
     "crx": "^5.0.1",
     "eslint": "^9.22.0",
+    "eslint-plugin-format": "^1.0.1",
     "esno": "^4.8.0",
     "fs-extra": "^11.3.0",
     "jsdom": "^26.0.0",

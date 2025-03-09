@@ -12,7 +12,7 @@ function openOptionsPage() {
     <div>Sidepanel</div>
     <SharedSubtitle />
 
-    <button class="btn mt-2" @click="openOptionsPage">
+    <button class="mt-2 btn" @click="openOptionsPage">
       Open Options
     </button>
     <div class="mt-2">
