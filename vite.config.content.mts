@@ -24,6 +24,7 @@ export default defineConfig({
     lib: {
       entry: r('src/contentScripts/index.ts'),
       name: packageJson.name,
+      cssFileName: 'style',
       formats: ['iife'],
     },
     rollupOptions: {

@@ -25,7 +25,7 @@ const [show, toggle] = useToggle(false)
       bg="teal-600 hover:teal-700"
       @click="toggle()"
     >
-      <pixelarticons-power class="m-auto block text-lg text-white" />
+      <i i-pixelarticons-power align-middle text-2xl color-white icon-btn />
     </button>
   </div>
 </template>
