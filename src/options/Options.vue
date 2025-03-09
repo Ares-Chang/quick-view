@@ -12,7 +12,8 @@ import { storageDemo } from '~/logic/storage'
     <input v-model="storageDemo" class="mt-2 border border-gray-400 rounded px-2 py-1">
 
     <div class="mt-4">
-      Powered by Vite <pixelarticons-zap class="inline-block align-middle" />
+      Powered by Vite
+      <i i-pixelarticons-zap align-middle icon-btn />
     </div>
   </main>
 </template>
