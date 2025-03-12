@@ -1,19 +1,10 @@
-/* eslint-disable no-console */
 import { createApp } from 'vue'
-import { onMessage } from 'webext-bridge/content-script'
 import { setupApp } from '~/logic/common-setup'
 import App from './views/App.vue'
 
-// Firefox `browser.tabs.executeScript()` requires scripts return a primitive value
+// Firefox 的 `browser.tabs.executeScript()` 要求脚本返回一个原始值
 (() => {
-  console.info('[vitesse-webext] Hello world from content script')
-
-  // communication example: send previous tab title from background page
-  onMessage('tab-prev', ({ data }) => {
-    console.log(`[vitesse-webext] Navigate from page "${data.title}"`)
-  })
-
-  // mount component to context window
+  // 挂载组件到上下文窗口
   const container = document.createElement('div')
   container.id = __NAME__
   const root = document.createElement('div')
