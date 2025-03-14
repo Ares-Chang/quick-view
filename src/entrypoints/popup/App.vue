@@ -3,8 +3,8 @@ import HelloWorld from '@/components/HelloWorld.vue'
 </script>
 
 <template>
-  <div w-60 h-80 flex="~ col" bg-black color-white>
-    <div flex justify-center items-center gap-2>
+  <div flex="~ col" h-80 w-60 bg-black color-white>
+    <div flex items-center justify-center gap-2>
       <a href="https://wxt.dev" target="_blank">
         <img src="/wxt.svg" class="logo" alt="WXT logo">
       </a>

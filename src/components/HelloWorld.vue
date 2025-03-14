@@ -14,7 +14,7 @@ const count = ref(0)
       {{ msg }}
     </h1>
 
-    <div flex="~ col" justify-center items-center gap-6>
+    <div flex="~ col" items-center justify-center gap-6>
       <button type="button" btn @click="count++">
         count is {{ count }}
       </button>
