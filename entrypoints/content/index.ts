@@ -1,5 +1,5 @@
-import { createApp } from 'vue';
-import App from './App.vue';
+import { createApp } from 'vue'
+import App from './App.vue'
 
 export default defineContentScript({
   matches: ['<all_urls>'],
@@ -11,16 +11,16 @@ export default defineContentScript({
       position: 'inline',
       anchor: 'body',
       onMount: (container) => {
-        const app = createApp(App);
-        app.mount(container);
+        const app = createApp(App)
+        app.mount(container)
 
-        return app;
+        return app
       },
       onRemove: (app) => {
-        app?.unmount();
+        app?.unmount()
       },
-    });
+    })
 
-    ui.mount();
+    ui.mount()
   },
-});
+})
