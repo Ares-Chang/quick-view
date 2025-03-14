@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import '~/styles'
 
 export default defineContentScript({
   matches: ['<all_urls>'],
