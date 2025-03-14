@@ -11,9 +11,9 @@
     "build:firefox": "wxt build -b firefox",
     "zip": "wxt zip",
     "zip:firefox": "wxt zip -b firefox",
+    "lint": "eslint --cache .",
     "compile": "vue-tsc --noEmit",
-    "postinstall": "wxt prepare",
-    "lint": "eslint --cache ."
+    "postinstall": "simple-git-hooks && wxt prepare"
   },
   "dependencies": {
     "vue": "^3.5.12"
@@ -23,8 +23,16 @@
     "@types/chrome": "^0.0.280",
     "@wxt-dev/module-vue": "^1.0.1",
     "eslint": "^9.22.0",
+    "lint-staged": "^15.5.0",
+    "simple-git-hooks": "^2.11.1",
     "typescript": "5.6.3",
     "vue-tsc": "^2.1.10",
     "wxt": "^0.19.29"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }
