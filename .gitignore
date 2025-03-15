@@ -15,6 +15,7 @@ stats-*.json
 .wxt
 web-ext.config.ts
 *.local
+components.d.ts
 
 # Editor directories and files
 .DS_Store
