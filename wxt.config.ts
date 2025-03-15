@@ -16,6 +16,7 @@ export default defineConfig({
     presets: [
       '@vueuse/core',
     ],
+    warn: () => {},
   },
 
   vite: () => ({
