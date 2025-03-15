@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const url = ref('https://vueuse.org/')
+const { url } = useData()
 </script>
 
 <template>
@@ -14,7 +14,7 @@ const url = ref('https://vueuse.org/')
     border="~ gray-200 dark:gray-800"
     class="translate--1/2"
   >
-    <TooleBar />
+    <TooleBar select-none />
 
     <iframe :src="url" w-full flex-1 rd-md />
   </div>
