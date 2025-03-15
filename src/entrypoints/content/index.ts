@@ -15,6 +15,8 @@ export default defineContentScript({
         const app = createApp(App)
         app.mount(container)
 
+        syncIsDark(container)
+
         return app
       },
       onRemove: (app) => {
