@@ -22,7 +22,9 @@
   "devDependencies": {
     "@antfu/eslint-config": "^4.10.1",
     "@iconify-json/carbon": "^1.2.8",
+    "@iconify-json/material-symbols": "^1.2.16",
     "@types/chrome": "^0.0.280",
+    "@unocss/eslint-plugin": "66.1.0-beta.5",
     "@unocss/reset": "66.1.0-beta.5",
     "@wxt-dev/module-vue": "^1.0.1",
     "eslint": "^9.22.0",
