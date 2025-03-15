@@ -6,6 +6,8 @@ body,
   padding: 0;
 }
 
-html.dark {
+html.dark,
+body.dark {
+  background-color: #121212;
   color-scheme: dark;
 }
