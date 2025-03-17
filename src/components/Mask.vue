@@ -1,11 +1,20 @@
+<script setup lang="ts">
+const target = useTemplateRef<HTMLDivElement>('el')
+
+const { isOutside } = useMouseInElement(target)
+</script>
+
 <template>
   <div
+    pointer-events-none
     flex items-center justify-center
     transition duration-400 ease-in-out
-    backdrop="blur-none has-[#mask-box]:hover:blur-sm"
-    pointer-events="auto has-[#mask-box]:hover:none"
+    :class="{
+      'backdrop-blur-sm': !isOutside,
+      'pointer-events-auto!': !isOutside,
+    }"
   >
-    <div id="mask-box" h-fit w-fit>
+    <div ref="el" h-fit w-fit>
       <slot />
     </div>
   </div>
