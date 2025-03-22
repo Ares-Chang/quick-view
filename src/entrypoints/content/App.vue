@@ -1,20 +1,9 @@
 <script setup lang="ts">
-const { show, url } = useData()
+import { initLogic } from '~/logic'
 
-useEventListener(document, 'click', (event) => {
-  if (!event.altKey || event.button !== 0)
-    return
+const { show } = useData()
 
-  const link = (event.target as HTMLElement).closest('a')
-  if (!link)
-    return
-
-  // 阻止默认行为
-  event.preventDefault()
-
-  url.value = link.href
-  show.value = true
-})
+initLogic()
 </script>
 
 <template>
