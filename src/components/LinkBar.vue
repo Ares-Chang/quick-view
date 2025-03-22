@@ -2,11 +2,13 @@
 const { url } = useData()
 
 const website = computed(() => url.value.replace(/^https?:\/\//, ''))
+
+const icon = computed(() => `https://www.google.com/s2/favicons?domain=${website.value}&sz=32`)
 </script>
 
 <template>
   <div flex items-center gap-2>
-    <img src="https://vueuse.org/favicon.svg" alt="logo" h-5 w-5>
+    <img :src="icon" alt="logo" h-5 w-5>
 
     <a
       :href="url" target="_blank"
