@@ -9,7 +9,8 @@ export default defineConfig({
   modules: ['@wxt-dev/module-vue'],
 
   manifest: {
-    permissions: ['storage'],
+    permissions: ['storage', 'declarativeNetRequest'],
+    host_permissions: ['<all_urls>'],
   },
 
   imports: {
