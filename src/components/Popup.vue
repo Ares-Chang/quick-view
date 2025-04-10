@@ -3,7 +3,7 @@ const { url } = useData()
 </script>
 
 <template>
-  <Mask fixed left-0 top-0 z-999 h-screen w-screen>
+  <Mask fixed left-0 top-0 z-999999 h-screen w-screen>
     <div
       h-90vh w-95vw
       flex="~ col" gap-2
