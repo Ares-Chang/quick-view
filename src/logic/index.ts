@@ -1,6 +1,7 @@
 export function initLogic() {
   useClickLink()
   useDragLink()
+  useEscClose()
 }
 
 /**
@@ -55,5 +56,17 @@ function useDragLink() {
     url.value = draggedLink
     show.value = true
     draggedLink = null
+  })
+}
+
+/**
+ * 监听 Esc 键关闭
+ */
+export function useEscClose(document: Document = window.document) {
+  const { close } = useData()
+
+  useEventListener(document, 'keydown', (event) => {
+    if (event.key === 'Escape')
+      close()
   })
 }

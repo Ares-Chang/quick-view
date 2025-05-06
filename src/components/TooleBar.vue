@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { show } = useData()
+const { close } = useData()
 </script>
 
 <template>
@@ -13,7 +13,7 @@ const { show } = useData()
     <div flex items-center gap-1>
       <IconBtn icon="i-carbon-sun dark:i-carbon-moon" @click="toggleDark()" />
 
-      <IconBtn icon="i-carbon-close-large" @click="show = false" />
+      <IconBtn icon="i-carbon-close-large" @click="close" />
     </div>
   </div>
 </template>

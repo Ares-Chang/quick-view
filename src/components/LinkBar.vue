@@ -1,15 +1,9 @@
 <script setup lang="ts">
-const { url } = useData()
+const { url, refresh } = useData()
 
 const website = computed(() => url.value.replace(/^https?:\/\//, ''))
 
 const icon = computed(() => `https://www.google.com/s2/favicons?domain=${website.value}&sz=32`)
-
-function refresh() {
-  const oldUrl = url.value
-  url.value = ''
-  nextTick(() => url.value = oldUrl)
-}
 </script>
 
 <template>

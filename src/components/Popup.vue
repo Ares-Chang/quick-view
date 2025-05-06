@@ -1,5 +1,20 @@
 <script setup lang="ts">
+import { useEscClose } from '~/logic'
+
 const { url } = useData()
+const iframe = useTemplateRef<HTMLIFrameElement>('iframe')
+
+/**
+ * 监听 iframe 加载后，添加 Esc 键关闭
+ */
+onMounted(() => {
+  iframe.value?.addEventListener('load', () => {
+    if (!iframe.value?.contentDocument)
+      return
+
+    useEscClose(iframe.value?.contentDocument)
+  })
+})
 </script>
 
 <template>
@@ -15,7 +30,7 @@ const { url } = useData()
     >
       <TooleBar select-none />
 
-      <iframe :src="url" w-full flex-1 rd-md />
+      <iframe ref="iframe" :src="url" w-full flex-1 rd-md />
     </div>
   </Mask>
 </template>
