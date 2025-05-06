@@ -4,6 +4,12 @@ const { url } = useData()
 const website = computed(() => url.value.replace(/^https?:\/\//, ''))
 
 const icon = computed(() => `https://www.google.com/s2/favicons?domain=${website.value}&sz=32`)
+
+function refresh() {
+  const oldUrl = url.value
+  url.value = ''
+  nextTick(() => url.value = oldUrl)
+}
 </script>
 
 <template>
@@ -20,6 +26,6 @@ const icon = computed(() => `https://www.google.com/s2/favicons?domain=${website
 
     <IconBtn icon="i-carbon-share" />
 
-    <IconBtn icon="i-material-symbols-refresh-rounded" />
+    <IconBtn icon="i-material-symbols-refresh-rounded" @click="refresh" />
   </div>
 </template>
