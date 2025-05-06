@@ -35,7 +35,7 @@
     "unocss": "66.1.0-beta.5",
     "unplugin-vue-components": "^28.4.1",
     "vue-tsc": "^2.1.10",
-    "wxt": "^0.19.29"
+    "wxt": "^0.20.6"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
