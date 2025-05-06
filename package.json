@@ -11,6 +11,7 @@
     "build:firefox": "wxt build -b firefox",
     "zip": "wxt zip",
     "zip:firefox": "wxt zip -b firefox",
+    "release": "bumpp",
     "lint": "eslint --cache .",
     "compile": "vue-tsc --noEmit",
     "postinstall": "simple-git-hooks && wxt prepare"
@@ -27,6 +28,7 @@
     "@unocss/eslint-plugin": "66.1.0-beta.5",
     "@unocss/reset": "66.1.0-beta.5",
     "@wxt-dev/module-vue": "^1.0.1",
+    "bumpp": "^10.1.0",
     "eslint": "^9.22.0",
     "eslint-plugin-format": "^1.0.1",
     "lint-staged": "^15.5.0",
