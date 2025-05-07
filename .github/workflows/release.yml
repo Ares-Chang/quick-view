@@ -1,20 +1,25 @@
 name: Release Extension
 
+permissions:
+  contents: write
+
 on:
   push:
     tags:
       - 'v*'
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: lts/*
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
@@ -32,5 +37,13 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: .output/*.zip
+          body: |
+            - Chrome Extension: .output/quick-view-*-chrome.zip
+            - Firefox Extension: .output/quick-view-*-firefox.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Changelog
+        run: npx changelogithub
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
