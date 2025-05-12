@@ -19,16 +19,16 @@
     "prepare": "wxt prepare"
   },
   "dependencies": {
-    "@vueuse/core": "^13.1.0",
-    "vue": "^3.5.13"
+    "@vueuse/core": "catalog:build",
+    "vue": "catalog:build"
   },
   "devDependencies": {
-    "@iconify-json/carbon": "^1.2.8",
-    "@iconify-json/material-symbols": "^1.2.20",
-    "@types/chrome": "^0.0.321",
-    "@wxt-dev/module-vue": "^1.0.2",
-    "unplugin-vue-components": "^28.5.0",
-    "vue-tsc": "^2.2.10",
-    "wxt": "^0.20.6"
+    "@iconify-json/carbon": "catalog:icons",
+    "@iconify-json/material-symbols": "catalog:icons",
+    "@types/chrome": "catalog:types",
+    "@wxt-dev/module-vue": "catalog:wxt",
+    "unplugin-vue-components": "catalog:dev",
+    "vue-tsc": "catalog:dev",
+    "wxt": "catalog:wxt"
   }
 }
