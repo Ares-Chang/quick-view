@@ -9,8 +9,10 @@
   "scripts": {
     "dev": "nr --filter core dev",
     "dev:firefox": "nr --filter core dev:firefox",
+    "dev:website": "nr --filter website dev",
     "build": "nr --filter core build",
     "build:firefox": "nr --filter core build:firefox",
+    "build:website": "nr --filter website build",
     "zip": "nr --filter core zip",
     "zip:firefox": "nr --filter core zip:firefox",
     "release": "bumpp --recursive --all",

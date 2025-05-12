@@ -9,6 +9,7 @@ lerna-debug.log*
 .eslintcache
 
 node_modules
+dist
 .output
 stats.html
 stats-*.json
@@ -16,6 +17,8 @@ stats-*.json
 web-ext.config.ts
 *.local
 components.d.ts
+.nuxt
+packages/website/.env
 
 # Editor directories and files
 .DS_Store

@@ -19,8 +19,8 @@
     "prepare": "wxt prepare"
   },
   "dependencies": {
-    "@vueuse/core": "catalog:build",
-    "vue": "catalog:build"
+    "@vueuse/core": "catalog:frontend",
+    "vue": "catalog:frontend"
   },
   "devDependencies": {
     "@iconify-json/carbon": "catalog:icons",
