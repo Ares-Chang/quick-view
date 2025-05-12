@@ -13,7 +13,7 @@
     "build:firefox": "nr --filter core build:firefox",
     "zip": "nr --filter core zip",
     "zip:firefox": "nr --filter core zip:firefox",
-    "release": "bumpp",
+    "release": "bumpp --recursive --all",
     "postinstall": "simple-git-hooks && nr --filter core prepare"
   },
   "devDependencies": {
