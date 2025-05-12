@@ -7,17 +7,18 @@
   "author": "Ares Chang <https://github.com/Ares-Chang>",
   "license": "MIT",
   "scripts": {
-    "dev": "pnpm --filter core dev",
-    "dev:firefox": "pnpm --filter core dev:firefox",
-    "build": "pnpm --filter core build",
-    "build:firefox": "pnpm --filter core build:firefox",
-    "zip": "pnpm --filter core zip",
-    "zip:firefox": "pnpm --filter core zip:firefox",
+    "dev": "nr --filter core dev",
+    "dev:firefox": "nr --filter core dev:firefox",
+    "build": "nr --filter core build",
+    "build:firefox": "nr --filter core build:firefox",
+    "zip": "nr --filter core zip",
+    "zip:firefox": "nr --filter core zip:firefox",
     "release": "bumpp",
-    "postinstall": "simple-git-hooks && pnpm --filter core prepare"
+    "postinstall": "simple-git-hooks && nr --filter core prepare"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.13.0",
+    "@antfu/ni": "^24.3.0",
     "@unocss/eslint-plugin": "66.1.0-beta.5",
     "@unocss/reset": "66.1.0-beta.5",
     "bumpp": "^10.1.0",
