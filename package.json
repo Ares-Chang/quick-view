@@ -1,34 +1,25 @@
 {
   "name": "quick-view",
-  "type": "module",
   "version": "0.0.1",
   "private": true,
   "packageManager": "pnpm@10.10.0",
   "description": "链接内容一瞥即知。",
+  "author": "Ares Chang <https://github.com/Ares-Chang>",
+  "license": "MIT",
   "scripts": {
-    "dev": "wxt",
-    "dev:firefox": "wxt -b firefox",
-    "build": "wxt build",
-    "build:firefox": "wxt build -b firefox",
-    "zip": "wxt zip",
-    "zip:firefox": "wxt zip -b firefox",
+    "dev": "pnpm --filter core dev",
+    "dev:firefox": "pnpm --filter core dev:firefox",
+    "build": "pnpm --filter core build",
+    "build:firefox": "pnpm --filter core build:firefox",
+    "zip": "pnpm --filter core zip",
+    "zip:firefox": "pnpm --filter core zip:firefox",
     "release": "bumpp",
-    "lint": "eslint --cache .",
-    "compile": "vue-tsc --noEmit",
-    "postinstall": "simple-git-hooks && wxt prepare"
-  },
-  "dependencies": {
-    "@vueuse/core": "^13.1.0",
-    "vue": "^3.5.13"
+    "postinstall": "simple-git-hooks && pnpm --filter core prepare"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.13.0",
-    "@iconify-json/carbon": "^1.2.8",
-    "@iconify-json/material-symbols": "^1.2.20",
-    "@types/chrome": "^0.0.321",
     "@unocss/eslint-plugin": "66.1.0-beta.5",
     "@unocss/reset": "66.1.0-beta.5",
-    "@wxt-dev/module-vue": "^1.0.2",
     "bumpp": "^10.1.0",
     "eslint": "^9.26.0",
     "eslint-plugin-format": "^1.0.1",
@@ -36,10 +27,7 @@
     "pnpm": "^10.10.0",
     "simple-git-hooks": "^2.13.0",
     "typescript": "5.6.3",
-    "unocss": "66.1.0-beta.5",
-    "unplugin-vue-components": "^28.5.0",
-    "vue-tsc": "^2.2.10",
-    "wxt": "^0.20.6"
+    "unocss": "66.1.0-beta.5"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"

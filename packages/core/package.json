@@ -1,0 +1,34 @@
+{
+  "name": "core",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@10.10.0",
+  "description": "链接内容一瞥即知。",
+  "author": "Ares Chang <https://github.com/Ares-Chang>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "wxt",
+    "dev:firefox": "wxt -b firefox",
+    "build": "wxt build",
+    "build:firefox": "wxt build -b firefox",
+    "zip": "wxt zip",
+    "zip:firefox": "wxt zip -b firefox",
+    "lint": "eslint --cache .",
+    "compile": "vue-tsc --noEmit",
+    "prepare": "wxt prepare"
+  },
+  "dependencies": {
+    "@vueuse/core": "^13.1.0",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@iconify-json/carbon": "^1.2.8",
+    "@iconify-json/material-symbols": "^1.2.20",
+    "@types/chrome": "^0.0.321",
+    "@wxt-dev/module-vue": "^1.0.2",
+    "unplugin-vue-components": "^28.5.0",
+    "vue-tsc": "^2.2.10",
+    "wxt": "^0.20.6"
+  }
+}

@@ -36,10 +36,10 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          files: .output/*.zip
+          files: packages/core/.output/*.zip
           body: |
-            - Chrome Extension: .output/quick-view-*-chrome.zip
-            - Firefox Extension: .output/quick-view-*-firefox.zip
+            - Chrome Extension: packages/core/.output/quick-view-*-chrome.zip
+            - Firefox Extension: packages/core/.output/quick-view-*-firefox.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

@@ -7,16 +7,35 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@vueuse/core':
+        specifier: ^13.1.0
+        version: 13.1.0(vue@3.5.13(typescript@5.6.3))
+      vue:
+        specifier: ^3.5.13
+        version: 3.5.13(typescript@5.6.3)
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^4.13.0
         version: 4.13.0(@typescript-eslint/utils@8.32.0(eslint@9.26.0(jiti@2.4.2))(typescript@5.6.3))(@unocss/eslint-plugin@66.1.0-beta.5(eslint@9.26.0(jiti@2.4.2))(typescript@5.6.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.26.0(jiti@2.4.2)))(eslint@9.26.0(jiti@2.4.2))(typescript@5.6.3)
+      '@iconify-json/carbon':
+        specifier: ^1.2.8
+        version: 1.2.8
+      '@iconify-json/material-symbols':
+        specifier: ^1.2.20
+        version: 1.2.20
+      '@types/chrome':
+        specifier: ^0.0.321
+        version: 0.0.321
       '@unocss/eslint-plugin':
         specifier: 66.1.0-beta.5
         version: 66.1.0-beta.5(eslint@9.26.0(jiti@2.4.2))(typescript@5.6.3)
       '@unocss/reset':
         specifier: 66.1.0-beta.5
         version: 66.1.0-beta.5
+      '@wxt-dev/module-vue':
+        specifier: ^1.0.2
+        version: 1.0.2(vite@6.3.5(@types/node@22.13.10)(jiti@2.4.2)(yaml@2.7.1))(vue@3.5.13(typescript@5.6.3))(wxt@0.20.6(@types/node@22.13.10)(jiti@2.4.2)(rollup@4.35.0)(yaml@2.7.1))
       bumpp:
         specifier: ^10.1.0
         version: 10.1.0(magicast@0.3.5)
@@ -41,28 +60,6 @@ importers:
       unocss:
         specifier: 66.1.0-beta.5
         version: 66.1.0-beta.5(postcss@8.5.3)(vite@6.3.5(@types/node@22.13.10)(jiti@2.4.2)(yaml@2.7.1))(vue@3.5.13(typescript@5.6.3))
-
-  packages/core:
-    dependencies:
-      '@vueuse/core':
-        specifier: ^13.1.0
-        version: 13.1.0(vue@3.5.13(typescript@5.6.3))
-      vue:
-        specifier: ^3.5.13
-        version: 3.5.13(typescript@5.6.3)
-    devDependencies:
-      '@iconify-json/carbon':
-        specifier: ^1.2.8
-        version: 1.2.8
-      '@iconify-json/material-symbols':
-        specifier: ^1.2.20
-        version: 1.2.20
-      '@types/chrome':
-        specifier: ^0.0.321
-        version: 0.0.321
-      '@wxt-dev/module-vue':
-        specifier: ^1.0.2
-        version: 1.0.2(vite@6.3.5(@types/node@22.13.10)(jiti@2.4.2)(yaml@2.7.1))(vue@3.5.13(typescript@5.6.3))(wxt@0.20.6(@types/node@22.13.10)(jiti@2.4.2)(rollup@4.35.0)(yaml@2.7.1))
       unplugin-vue-components:
         specifier: ^28.5.0
         version: 28.5.0(@babel/parser@7.26.10)(vue@3.5.13(typescript@5.6.3))
@@ -2406,6 +2403,10 @@ packages:
     resolution: {integrity: sha512-sUCprePs6/rbx4vKC60Hez6X10HPkpDJaGcy3D1NdwR7g1RcNkWL8q9mJMreOqmHBTs+1sNFp+wOiX9fr+hoOQ==}
     engines: {node: '>=20.18'}
     hasBin: true
+
+  listr2@8.2.5:
+    resolution: {integrity: sha512-iyAZCeyD+c1gPyE9qpFu8af0Y+MRtmKOncdGoA2S5EY8iFq99dmmvkNnHiWo+pj0s7yH7l3KPIgee77tKpXPWQ==}
+    engines: {node: '>=18.0.0'}
 
   listr2@8.3.3:
     resolution: {integrity: sha512-LWzX2KsqcB1wqQ4AHgYb4RsDXauQiqhjLk+6hjbaeHG4zpjjVAB6wC/gz6X0l+Du1cN3pUB5ZlrvTbhGSNnUQQ==}
@@ -6198,6 +6199,15 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  listr2@8.2.5:
+    dependencies:
+      cli-truncate: 4.0.0
+      colorette: 2.0.20
+      eventemitter3: 5.0.1
+      log-update: 6.1.0
+      rfdc: 1.4.1
+      wrap-ansi: 9.0.0
+
   listr2@8.3.3:
     dependencies:
       cli-truncate: 4.0.0
@@ -6957,7 +6967,7 @@ snapshots:
       dotenv: 16.4.7
       extract-zip: 2.0.1
       formdata-node: 6.0.3
-      listr2: 8.3.3
+      listr2: 8.2.5
       lodash.camelcase: 4.3.0
       lodash.kebabcase: 4.1.1
       lodash.snakecase: 4.1.1
