@@ -1,5 +1,5 @@
 {
-  "name": "quick-view",
+  "name": "quick-view-monorepo",
   "version": "0.0.1",
   "private": true,
   "packageManager": "pnpm@10.10.0",
@@ -7,16 +7,16 @@
   "author": "Ares Chang <https://github.com/Ares-Chang>",
   "license": "MIT",
   "scripts": {
-    "dev": "nr --filter core dev",
-    "dev:firefox": "nr --filter core dev:firefox",
+    "dev": "nr --filter quick-view dev",
+    "dev:firefox": "nr --filter quick-view dev:firefox",
     "dev:website": "nr --filter website dev",
-    "build": "nr --filter core build",
-    "build:firefox": "nr --filter core build:firefox",
+    "build": "nr --filter quick-view build",
+    "build:firefox": "nr --filter quick-view build:firefox",
     "build:website": "nr --filter website build",
-    "zip": "nr --filter core zip",
-    "zip:firefox": "nr --filter core zip:firefox",
+    "zip": "nr --filter quick-view zip",
+    "zip:firefox": "nr --filter quick-view zip:firefox",
     "release": "bumpp --recursive --all",
-    "postinstall": "simple-git-hooks && nr --filter core prepare"
+    "postinstall": "simple-git-hooks && nr --filter quick-view prepare"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:lint",
