@@ -4,8 +4,8 @@ packages:
 catalogs:
   build:
     unplugin: ^2.2.2
-
     vite: ^6.2.5
+
   dev:
     '@antfu/ni': ^24.3.0
     '@unocss/reset': ^66.1.0-beta.5
@@ -49,6 +49,7 @@ catalogs:
     '@types/chrome': ^0.0.321
 
   wxt:
+    '@wxt-dev/auto-icons': ^1.0.2
     '@wxt-dev/module-vue': ^1.0.2
     wxt: ^0.20.6
 

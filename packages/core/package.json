@@ -26,6 +26,7 @@
     "@iconify-json/carbon": "catalog:icons",
     "@iconify-json/material-symbols": "catalog:icons",
     "@types/chrome": "catalog:types",
+    "@wxt-dev/auto-icons": "catalog:wxt",
     "@wxt-dev/module-vue": "catalog:wxt",
     "unplugin-vue-components": "catalog:dev",
     "vue-tsc": "catalog:dev",
